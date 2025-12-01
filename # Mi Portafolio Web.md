@@ -21,4 +21,4 @@ Este proyecto corresponde al desarrollo del portafolio personal del módulo M2.
 
 ## Sitio publicado
 
-GitHub Pages: (https://bymac-si.github.io/mi-portafolio-web/)
+GitHub Pages: (https://bymac-si.github.io/BYMAC_PORTAFOLIO/)
