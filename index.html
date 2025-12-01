@@ -4,56 +4,272 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio Web - Marcos Castro</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
   <link rel="stylesheet" href="assets/css/styles.css">
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="js/script.js"></script>
+
   <style>
-    a.navbar-brand:hover{
-      background-color: var(--tertiary);
+    body {
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .navbar-brand:hover {
+      background-color: var(--tertiary, #f5f5f5);
+      border-radius: .5rem;
+      transition: background-color .2s ease;
+    }
+    .hero-section {
+      min-height: 60vh;
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar bg-body-tertiary shadow rounded-3 p-4 m-3">
-      <a href="" class="navbar-brand" ><img src="assets/img/byMAC_logo.png" alt="Logo byMAC" height="35" class="d-inline-block align-text-top"></a>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+      <div class="container">
+        <a href="#inicio" class="navbar-brand d-flex align-items-center">
+          <img src="assets/img/byMAC_logo.png" alt="Logo byMAC" height="35" class="me-2">
+          <span class="fw-semibold">byMAC · Portafolio</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <br>
-    
   </header>
-  <div class="text-center">
-  <h1 class="info-contacto display-1 fw-bold">Marcos Castro</h1>
-    <p class="fs-2 text fw-semibold">Desarrollador Web · Integrador Digital</p>
-</div>
+
+  <!-- MAIN -->
   <main>
-    <section id="sobre-mi" class="seccion card">
-      <h2 class="fw-bold fs-3 text">Sobre Mí</h2>
-      <p>
-        Soy un profesional orientado a la transformación digital, con experiencia
-        en desarrollo web, automatización de procesos y soluciones low-code.
-      </p>
+
+    <!-- HERO / INICIO -->
+    <section id="inicio" class="hero-section d-flex align-items-center bg-light py-5">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-6 text-center text-md-start">
+            <h1 class="display-4 fw-bold mb-3">Marcos Castro</h1>
+            <p class="fs-4 fw-semibold mb-3">Desarrollador Web · Integrador Digital</p>
+            <p class="mb-4">
+              Creo soluciones digitales que conectan datos, procesos y personas:
+              dashboards, automatización y experiencias web adaptadas a cada negocio.
+            </p>
+            <a href="#contacto" class="btn btn-primary btn-lg me-2">Contáctame</a>
+            <a href="#proyectos" class="btn btn-outline-primary btn-lg">Ver proyectos</a>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow border-0">
+              <div class="card-body p-4">
+                <h2 class="h5 fw-bold mb-3 text-center">Stack Principal</h2>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2">• HTML5, CSS3, Bootstrap</li>
+                  <li class="mb-2">• JavaScript, jQuery</li>
+                  <li class="mb-2">• AppSheet, Google Apps Script</li>
+                  <li class="mb-2">• Automatización de procesos y dashboards</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="proyectos" class="seccion card">
-      <h2 class="fw-bold fs-3 text">Mis Proyectos</h2>
-      <ul>
-        <li>Plataforma CRM para gestión de propiedades</li>
-        <li>Sistema POS para restaurantes</li>
-        <li>Dashboard logístico integrado con AppSheet</li>
-      </ul>
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="py-5">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-md-5">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h2 class="h4 fw-bold mb-3">Sobre mí</h2>
+                <p>
+                  Soy un profesional orientado a la transformación digital, con experiencia
+                  en desarrollo web, automatización de procesos y soluciones low-code.
+                </p>
+                <p class="mb-0">
+                  Mi foco está en integrar herramientas como AppSheet, Google Sheets y APIs
+                  con frontends ligeros para crear soluciones rápidas, escalables y de bajo costo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <!-- Acordeón (otro componente Bootstrap) -->
+            <div class="accordion" id="accordionPerfil">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#perfilExperiencia" aria-expanded="true" aria-controls="perfilExperiencia">
+                    Experiencia destacada
+                  </button>
+                </h2>
+                <div id="perfilExperiencia" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPerfil">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      <li>Implementación de sistemas POS para restaurantes.</li>
+                      <li>Dashboards logísticos y monitoreo de entregas.</li>
+                      <li>Automatización de reportes y procesos con Apps Script.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#perfilHabilidades" aria-expanded="false" aria-controls="perfilHabilidades">
+                    Habilidades clave
+                  </button>
+                </h2>
+                <div id="perfilHabilidades" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPerfil">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      <li>Diseño de flujos digitales y experiencia de usuario.</li>
+                      <li>Integración de herramientas low-code / no-code.</li>
+                      <li>Optimización de procesos con foco en resultados.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!-- /accordion -->
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="h3 fw-bold text-center mb-4">Proyectos destacados</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 fw-bold">CRM para gestión de propiedades</h3>
+                <p class="flex-grow-1">
+                  Plataforma para administrar propiedades, contactos y estados de arriendo/venta,
+                  conectada a hojas de cálculo y automatizaciones.
+                </p>
+                <button class="btn btn-outline-primary mt-2" type="button">Ver detalles</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 fw-bold">Sistema POS para restaurantes</h3>
+                <p class="flex-grow-1">
+                  Sistema de pedidos, mesas y caja con reportes diarios, adaptado a pequeños
+                  locales gastronómicos.
+                </p>
+                <button class="btn btn-outline-primary mt-2" type="button">Ver detalles</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 fw-bold">Dashboard logístico integrado</h3>
+                <p class="flex-grow-1">
+                  Monitoreo de entregas, rutas y estados en tiempo real, usando AppSheet,
+                  Google Sheets y paneles web.
+                </p>
+                <button class="btn btn-outline-primary mt-2" type="button">Ver detalles</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-5">
+      <div class="container">
+        <h2 class="h3 fw-bold text-center mb-4">Contacto</h2>
+
+        <!-- Alerta de error (Bootstrap Alert) -->
+        <div id="errorAlert" class="alert alert-danger d-none" role="alert">
+          Por favor completa todos los campos obligatorios y verifica tu correo.
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <form id="contactForm" class="card shadow border-0 p-4">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto o idea"></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 Marcos Castro Abarca | byMAC</p>
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2025 Marcos Castro Abarca | byMAC · Todos los derechos reservados</p>
   </footer>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- MODAL DE ÉXITO (Bootstrap Modal) -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="successModalLabel">Mensaje enviado</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          ¡Gracias por contactarme! He recibido tu mensaje y te responderé a la brevedad.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (bundle con Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS propio -->
+  <script src="js/script.js"></script>
 </body>
 </html>
