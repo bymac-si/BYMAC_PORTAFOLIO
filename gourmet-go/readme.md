@@ -53,5 +53,5 @@ assets/img/          → Carpeta con imágenes de recetas
 ## 👨‍💻 Autor
 
 **Marcos Castro Abarca**  
-Proyecto desarrollado como parte del Plan Formativo **Desarrollo de Aplicaciones Full Stack JavaScript** (Desafío Latam).  
+Proyecto desarrollado como parte del Plan Formativo **Desarrollo de Aplicaciones Full Stack JavaScript**.  
 🌐 [byMAC · Transformación Digital](https://bymac.cl)
