@@ -11,60 +11,52 @@
   </p>
 
   <script>
-    // ==========================
-    // 1. Definición de la clase Libro
-    // ==========================
-    class Libro {
-      constructor(titulo, autor, estado) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.estado = estado;
-      }
+    // ===============================
+// Definición de la Clase Libro
+// ===============================
+class Libro {
+  constructor(titulo, autor, estado) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.estado = estado;
+  }
 
-      mostrarInfo() {
-        console.log(
-          `El libro "${this.titulo}" de ${this.autor} se encuentra ${this.estado}.`
-        );
-      }
-    }
+  mostrarInfo() {
+    console.log(
+      `El libro "${this.titulo}" de ${this.autor} se encuentra ${this.estado}.`
+    );
+  }
+}
 
-    // ==========================
-    // 2. Array de inventario
-    // ==========================
-    const inventario = [];
+// ===============================
+// Inicialización del Inventario
+// ===============================
+const inventario = [];
 
-    // ==========================
-    // 3. Carga interactiva de libros
-    // ==========================
-    let seguirAgregando = true;
+// ===============================
+// Carga Interactiva de Libros
+// ===============================
+let continuar = true;
 
-    while (seguirAgregando) {
-      const titulo = prompt("Ingresa el título del libro:");
-      const autor = prompt("Ingresa el autor del libro:");
-      const estado = prompt('Ingresa el estado del libro (por ejemplo: "Disponible" o "Prestado"):');
+while (continuar) {
+  const titulo = prompt("Ingrese el título del libro:");
+  const autor = prompt("Ingrese el autor del libro:");
+  const estado = prompt('Ingrese el estado del libro ("Disponible" o "Prestado"):');
 
-      if (titulo && autor && estado) {
-        const nuevoLibro = new Libro(titulo, autor, estado);
-        inventario.push(nuevoLibro);
-      } else {
-        alert("Alguno de los campos quedó vacío. Este libro no se agregará al inventario.");
-      }
+  const nuevoLibro = new Libro(titulo, autor, estado);
+  inventario.push(nuevoLibro);
 
-      seguirAgregando = confirm("¿Deseas agregar otro libro al inventario?");
-    }
+  continuar = confirm("¿Desea agregar otro libro?");
+}
 
-    // ==========================
-    // 4. Mostrar inventario completo en consola
-    // ==========================
-    console.log("--- Inventario de la Biblioteca ---");
-    for (const libro of inventario) {
-      libro.mostrarInfo();
-    }
+// ===============================
+// Muestra del Inventario Completo
+// ===============================
+console.log("--- Inventario de la Biblioteca ---");
 
-    // Mensaje final orientativo
-    if (inventario.length === 0) {
-      console.log("No se agregaron libros al inventario.");
-    }
+for (const libro of inventario) {
+  libro.mostrarInfo();
+}
   </script>
 </body>
 </html>
