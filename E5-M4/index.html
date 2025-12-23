@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de APIs</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+        .container { border: 1px solid #ccc; padding: 20px; margin-top: 20px; min-height: 100px; }
+        button { padding: 10px; margin-right: 10px; cursor: pointer; }
+        ul { list-style: none; padding: 0; }
+        li { background-color: #f4f4f4; margin-bottom: 10px; padding: 15px; border-radius: 5px; }
+        h4, p { margin: 0; }
+    </style>
+</head>
+<body>
+    <h1>Explorador de Usuarios</h1>
+    <button id="cargar-xhr">Cargar Usuarios (XHR)</button>
+    <button id="cargar-fetch">Cargar Usuarios (Fetch)</button>
+
+    <div id="resultado" class="container">
+        </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
